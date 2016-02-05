@@ -1,0 +1,375 @@
+@font-face {
+  font-style:   normal;
+  font-weight:  700;
+  font-family: 'DINOT-MEDIUM';
+  src: url('./font/DINOT-Medium.eot'); /* IE9 Compat Modes */
+  src: url('./font/DINOT-Medium.eot') format('embedded-opentype'), /* IE6-IE8 */
+       url('./font/DINOT-Medium.woff') format('woff'), /* Modern Browsers */
+       url('./font/DINOT-Medium.ttf')  format('truetype'), /* Safari, Android, iOS */
+       url('./font/DINOT-Medium.svg') format('svg'); /* Legacy iOS */
+}
+
+@font-face {
+  font-family: "Univers55";
+  src: url("./font/UniversLTStd.otf");
+  src: url("./font/UniversLTStd.otf") format("opentype");
+  font-style:   normal;
+  font-weight:  700;
+}
+
+@font-face {
+  font-family: "Univers45";
+  src: url("./font/UniversLTStd-Light.ttf");
+  src: url("./font/UniversLTStd-Light.ttf") format("truetype");
+  font-style:   normal;
+  font-weight:  700;
+}
+
+
+@font-face {
+  font-family: "DINOT";
+  src: url("./font/DINOT.otf");
+  src: url("./font/DINOT.otf") format("opentype");
+  font-style:   normal;
+  font-weight:  700;
+}
+
+@font-face {
+  font-family: "DINOT-Bold";
+  src: url("./font/DINOT-Bold.otf");
+  src: url("./font/DINOT-Bold.otf") format("opentype");
+  font-style:   normal;
+  font-weight:  700;
+}
+
+body {
+  font-family: DINOT-MEDIUM;
+  margin: 0px;
+}
+a {
+  text-decoration: none;
+  color: white;
+}
+
+#introduction {
+  height: 100vh;
+  margin: 0px;
+  padding: 5% 12%;
+  min-width: 76%;
+}
+
+#name {
+  font-size: 20vmin;
+}
+
+#tagLine {
+  display: flex;
+  display: -webkit-flex;
+  font-family: Univers55;
+  font-size: 7vh;
+  justify-content: flex-end;
+  -webkit-justify-content: flex-end;
+  padding-top: 2.5vh;
+}
+
+#downArrow {
+  display: flex;
+  display: -webkit-flex;
+  justify-content: center;
+  -webkit-justify-content: center;
+  padding-top: 10vh;
+}
+
+.bannerContents {
+  color: inherit;
+  display: flex;
+  display: -webkit-flex;
+  font-size: 7vh;
+  padding-left: 6%;
+  padding-right: 6%;
+  align-items: center;
+  -webkit-align-items: center;
+  justify-content: space-between;
+  -webkit-justify-content: space-between;
+}
+
+.projectBanner {
+  height: 30vh;
+}
+
+.activeProjectBanner {
+  color: white;
+  background-color: blue;
+  height: 20vh;
+  transition : height .25s;
+}
+
+.activeProjectBannerTransition {
+  height: 38vh;
+  overflow: auto;
+}
+
+.activeProjectBanner > .projectBanner {
+  background-color: inherit;
+}
+
+.readMoreBox {
+  border-style: solid;
+  border-width: 0px;
+  border-color: transparent;
+  color: transparent;
+  font-size: 5vh;
+  padding : 1vh 2vw;
+  max-height: 0;
+  overflow: hidden;
+  -webkit-transition: max-height 0.25s, border-width 0.25s, border-color 0.25s, color 0.25s;
+  -moz-transition: max-height 0.25s, border-width 0.25s, border-color 0.25s, color 0.25s;
+  transition: max-height 0.25s, border-width 0.25s, border-color 0.25s, color 0.25s;
+}
+
+.transitionReadMore {
+  max-height: 200px;
+  border-width: 3px;
+  border-color: white;
+  color: inherit;
+}
+
+.projectTitle {
+  font-family: DINOT;
+  max-width: 30vw;
+}
+
+.projectSummary {
+  display: flex;
+  display: -webkit-flex;
+  font-family: Univers55;
+  font-size: 3vh;
+  align-items: center;
+  -webkit-align-items: center;
+  justify-content: center;
+  -webkit-justify-content: center;
+  padding-left: 6%;
+  padding-right: 6%;
+  color: transparent;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  -webkit-transition: max-height 0.25s, color .25s;
+  -moz-transition: max-height 0.25s, color .25s;
+  transition: max-height 0.25s, color .25s;
+}
+
+
+.transitionProjectSummary {
+  height: auto;
+  min-height: 10vh;
+  color: white;
+}
+
+.projectBanner .bannerContents :hover {
+  transition-property: height;
+  transition-duration: 1s;
+  height: 60vh;
+}
+
+.plus {
+  transform : rotate(0deg);
+  transition: transform .25s;
+}
+
+.rotatedX {
+  -ms-transform: rotate(45deg); /* IE 9 */
+  -webkit-transform: rotate(45deg); /* Chrome, Safari, Opera */
+  transform: rotate(45deg);
+  -webkit-transition: transform .25s; /* For Safari 3.1 to 6.0 */
+}
+
+.scaledProjectBanner {
+  height: 60vh;
+  -webkit-transition: height .25s; /* For Safari 3.1 to 6.0 */
+  transition: height .25s;
+}
+
+.aboutJoe {
+  padding: 6%;
+}
+
+.aboutJoe > .header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+
+.aboutJoe > .header > .name {
+  font-size: 10vh;
+  font-family: DINOT;
+}
+
+.aboutJoe > .header > .roles {
+  font-size: 6.66vh;
+  font-family: Univers55;
+}
+
+.aboutJoe > .header > .roles > div {
+  text-align: right;
+}
+
+
+.aboutJoe > .body {
+  padding-top: 3vh;
+  font-family: Univers55;
+}
+
+.footer {
+  height: 10vh;
+  display: flex;
+  align-items: center;
+  -webkit-align-items: center;
+  justify-content: space-between;
+  -webkit-justify-content: space-between;
+  background-color: #03A9F4;
+  padding-left: 6%;
+  padding-right: 6%;
+}
+
+.projectPage > .header {
+  padding: 2% 6%;
+  color: white;
+  display: flex;
+  display: -webkit-flex;
+  -webkit-justify-content: space-between;
+  justify-content: space-between;
+  align-items : center;
+  -webkit-align-items : center;
+  background-color: #3B2418;
+}
+
+.projectPage > .header > .name {
+  font-family: DINOT-MEDIUM;
+  font-size: 4vmin;
+}
+
+.projectPage > .header > .projectName {
+  font-family: Univers45;
+  font-size: 5vmin;
+}
+
+.projectPicture {
+  padding-left: 6%;
+  padding-right: 6%;
+  padding-bottom: 65vh;
+  background-color: #9E9E9E;
+}
+
+.projectSpecs {
+  padding: 4vmax 6%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.title {
+  color: inherit;
+  font-family: DINOT-Bold;
+  font-size: 5vmin;
+}
+
+.description {
+  font-family: Univers55;
+  font-size: 3.75vmin;
+}
+
+.projectSpec {
+  padding-bottom: 5vmax;
+}
+
+a.description {
+  color: black;
+}
+
+.projectNavigation {
+  width: 100%;
+  height: 22vh;
+  display: flex;
+  display: -webkit-flex;
+  align-items : center;
+  -webkit-align-items : center;
+}
+
+.prevProject {  
+  display: flex;
+  display: -webkit-flex;
+  align-items : center;
+  -webkit-align-items : center;
+  justify-content: center;
+  -webkit-justify-content: center;
+  color: white;
+  height: 100%;
+  width: 50%;
+  font-size: 3.75vw;
+  font-family: Univers55;
+  background-color: grey;
+}
+
+.nextProject {
+  display: flex;
+  display: -webkit-flex;
+  align-items : center;
+  -webkit-align-items : center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  height: 100%;
+  width: 50%;
+  color: white;
+  font-size: 3.75vw;
+  font-family: Univers55;
+  background-color: #383834;
+}
+
+@media (max-width: 820px){
+  #name{
+    font-size: 17vmin;
+  }
+  #tagLine{
+    font-size: 6vw;
+    justify-content: center;
+    -webkit-justify-content: center;
+  }
+  #introduction {
+    display: flex;
+    display: -webkit-flex;
+    align-items : center;
+    -webkit-align-items : center;
+  }
+
+  .readMoreBox {
+    font-size: 3vmin; 
+  }
+
+  .bannerContents {
+    font-size: 6vmin;
+  }
+
+  .aboutJoe > .header > .name {
+    font-size: 10vmin;
+
+  }
+
+  .aboutJoe > .header > .roles {
+    font-size: 6.66vmin;
+  }
+  .aboutJoe > .body {
+    padding-top: 3vmin;
+  }
+  .projectPicture {
+    padding-bottom: 50vh;
+  }
+  .projectBanner {
+    height: 20vh;
+  }
+  .projectSummary{
+    font-size: 4vmin;
+  }
+
+}
+
+
