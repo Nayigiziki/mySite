@@ -17,19 +17,20 @@ export default class Project extends React.Component {
     var spanXClassString = 'plus';
     var divProjectSummaryClassString = 'projectSummary';
     var clickSpanXHandler = this.updateStateActiveBoolean.bind(this, this.state.active);
-
+    var linkClassString = 'linkFromIndexToProjectPage';
     if(this.state.active){
       divActiveProjectBannerClassString += ' activeProjectBannerTransition';
       spanReadMoreClassString += ' transitionReadMore';
       spanXClassString +=  ' rotatedX';
       divProjectSummaryClassString += ' transitionProjectSummary';
+      linkClassString = 'linkFromIndexToProjectPageActive';
     } 
-
+    console.log('link',linkClassString)
     return (
         <div className={divActiveProjectBannerClassString}>
             <div className='projectBanner bannerContents'>
               <span className='projectTitle'>{this.props.projectName}</span>
-              <Link to={'/projects/' + this.props.projectName}>
+              <Link className={linkClassString} to={'/projects/' + this.props.projectName}>
                 <span className={spanReadMoreClassString}>Read More</span>
               </Link>
               <span className={spanXClassString} onClick={clickSpanXHandler}><img src={'./assets/plus.png'}/></span>
