@@ -19,7 +19,7 @@ export default class App extends React.Component {
               <div id='introduction'>
                 <div>
                   <div id='name'>Joseph</div>
-                  <div id='name'>Nayigiziki</div>
+                  <div className='lastName' id='name'>Nayigiziki</div>
                   <div id='tagLine'><div>Engineer, tinkerer, creator</div></div>
                   <div id='downArrow'><div><img src={'./assets/downArrow.png'}/></div></div>
                 </div>
@@ -29,7 +29,7 @@ export default class App extends React.Component {
                 <div className='header'>
                   <div className='name'>
                     <div>Joseph</div>
-                    <div>Nayigiziki</div>
+                    <div className='lastName'>Nayigiziki</div>
                   </div>
                   <div className='roles'>
                     <div>Engineer</div>

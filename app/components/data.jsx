@@ -3,7 +3,7 @@ import uuid from 'node-uuid';
 const projects = [
     {
       id : uuid.v4(),
-      projectName : 'track&Forth',
+      projectName : 'track&forth',
       myRole : 'Software Engineer',
       images : [],
       projectDescription: 'track&Forth allows you to share music with your friends very easily in the browser. Currently available in the chrome store! track&Forth allows you to share music with your friends very easily in the browser. ',
