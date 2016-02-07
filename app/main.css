@@ -42,6 +42,54 @@
   font-weight:  700;
 }
 
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+ol, ul {
+  list-style: none;
+}
+blockquote, q {
+  quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* CSS Start */
+
 body {
   font-family: DINOT-MEDIUM;
   margin: 0px;
@@ -54,22 +102,9 @@ a {
   color: white;
 }
 
-div#app {
-  width : 100%;
-  height: 100%;
-
-}
-
-#pageContainer {
-  width: 100%;
-  height: 100%;
-}
-
 #introduction {
   height: 100vh;
-  margin: 0px;
   padding: 5% 12% 0% 12%;
-  min-width: 76%;
 }
 
 #name {
@@ -84,10 +119,10 @@ div#app {
 #tagLine {
   display: flex;
   display: -webkit-flex;
-  font-family: Univers55;
-  font-size: 7vh;
   justify-content: flex-end;
   -webkit-justify-content: flex-end;
+  font-family: Univers55;
+  font-size: 7vh;
   padding-top: 2.5vh;
 }
 
@@ -100,15 +135,15 @@ div#app {
 }
 
 .bannerContents {
-  color: inherit;
   display: flex;
   display: -webkit-flex;
-  padding-left: 6%;
-  padding-right: 6%;
   align-items: center;
   -webkit-align-items: center;
   justify-content: space-between;
   -webkit-justify-content: space-between;
+  color: inherit;
+  padding-left: 6%;
+  padding-right: 6%;
 }
 
 .projectBanner {
@@ -120,14 +155,12 @@ div#app {
 .activeProjectBanner {
   color: white;
   height: auto;
-  transition : 
-  height .25s;
+  transition : height .25s;
 }
 
 .activeProjectBanner > .projectBanner {
   background-color: inherit;
 }
-
 
 a.linkFromIndexToProjectPage {
   display : none;
@@ -296,8 +329,7 @@ a.linkFromIndexToProjectPageActive {
 .projectSpecs {
   padding: 4vmax 6%;
   display: flex;
-  justify-content: space-around;
-  align-items: center;
+  flex-direction: column;
 }
 
 .title {
@@ -308,11 +340,21 @@ a.linkFromIndexToProjectPageActive {
 
 .description {
   font-family: Univers55;
-  font-size: 3.75vmin;
+  font-size: 2.00vmin;
+  word-wrap: break-word;
 }
 
 .projectSpec {
   padding-bottom: 5vmax;
+  width: 47.22223%;
+}
+
+.row > .projectSpec:nth-child(1){
+  padding-right: 1.38889%;
+}
+
+.row > .projectSpec:nth-child(2){
+  padding-left: 1.38889%;
 }
 
 a.description {
@@ -358,6 +400,12 @@ a.description {
   background-color: #383834;
 }
 
+.row {
+  display: flex;
+  flex-direction: row;
+}
+
+
 @media screen and (max-width: 51.25em){
   #name{
     font-size: 17vmin;
@@ -391,21 +439,31 @@ a.description {
 
   .aboutJoe > .header > .name {
     font-size: 10vmin;
-
   }
 
   .aboutJoe > .header > .roles {
     font-size: 6.66vmin;
   }
+
   .aboutJoe > .body {
     padding-top: 3vmin;
+    font-size: 4vmin;
   }
+
   .projectPicture {
     padding-bottom: 50vh;
   }
 
   .projectSummary{
-    font-size: 4vmin;
+    font-size: 4vw;
+  }
+
+  .title {
+    font-size: 4.5vmin;
+  }
+
+  .description {
+    font-size: 3.00vmin;
   }
 
 }

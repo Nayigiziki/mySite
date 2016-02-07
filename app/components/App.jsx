@@ -1,18 +1,28 @@
 import React from 'react';
 import uuid from 'node-uuid';
 import assign from 'object-assign';
+import Jump from 'jump.js'
 import Projects from './Projects.jsx';
 import Data  from './data.jsx';
+
 const projects = Data().projects;
+const jump = new Jump();
 
 export default class App extends React.Component {
     constructor(props){
       super(props)
       this.state = {projects};
     }
-
+    scrollIntoView(id, e){
+      var fromIdToIdObj = {
+        'downArrow' : '#projectsListing',
+        'upArrow' : '#introduction'
+      };
+      jump.jump(fromIdToIdObj[id], {
+        duration: 1000
+      });
+    }
     render (){
-      console.log(this.props.children)
       const projects = this.state.projects;
       return (
             <div id='pageContainer'>
@@ -21,7 +31,7 @@ export default class App extends React.Component {
                   <div id='name'>Joseph</div>
                   <div className='lastName' id='name'>Nayigiziki</div>
                   <div id='tagLine'><div>Engineer, tinkerer, creator</div></div>
-                  <div id='downArrow'><div><img src={'./assets/downArrow.png'}/></div></div>
+                  <div onClick={this.scrollIntoView.bind(null, 'downArrow')} id='downArrow'><div><img src={'./assets/downArrow.png'}/></div></div>
                 </div>
               </div>
               <Projects projects={projects} />
@@ -47,7 +57,7 @@ export default class App extends React.Component {
               <div className='footer'>
                   <div><img src={'./assets/circle.png'}/></div>
                   <div><img src={'./assets/circle.png'}/></div>
-                  <div><img src={'./assets/upArrowWhite.png'}/></div>
+                  <div onClick={this.scrollIntoView.bind(null, 'upArrow')} id='upArrow' ><img src={'./assets/upArrowWhite.png'}/></div>
                   <div><img src={'./assets/circle.png'}/></div>
                   <div><img src={'./assets/circle.png'}/></div>
               </div>

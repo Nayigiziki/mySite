@@ -10,7 +10,10 @@ export default class Project extends React.Component {
     this.state = {
       active : false,
       style : {
-        backgroundColor : ColorGenerator().hexString() 
+        backgroundColor : this.props.color
+      },
+      index: {
+        index: this.props.index
       }
     };
 
@@ -32,12 +35,12 @@ export default class Project extends React.Component {
       divProjectSummaryClassString += ' transitionProjectSummary';
       linkClassString = 'linkFromIndexToProjectPageActive';
     } 
-    console.log('link',linkClassString)
+
     return (
         <div className={divActiveProjectBannerClassString} style={this.state.style}>
             <div className='projectBanner bannerContents'>
               <span className='projectTitle'>{this.props.projectName}</span>
-              <Link className={linkClassString} to={'/projects/' + this.props.projectName}>
+              <Link className={linkClassString} to={'/projects/' + this.props.projectName} state={this.state.index}>
                 <span className={spanReadMoreClassString}>Read More</span>
               </Link>
               <span className={spanXClassString} onClick={clickSpanXHandler}><img src={'./assets/plus.png'}/></span>
