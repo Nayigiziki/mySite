@@ -102,6 +102,15 @@ a {
   color: white;
 }
 
+iframe {
+  height: 65vh;
+}
+
+iframe, .projectMedia {
+  width: 100%;
+  padding: 2vh 0;
+}
+
 #introduction {
   height: 100vh;
   padding: 5% 12% 0% 12%;
@@ -322,7 +331,6 @@ a.linkFromIndexToProjectPageActive {
 .projectPicture {
   padding-left: 6%;
   padding-right: 6%;
-  padding-bottom: 65vh;
   background-color: #9E9E9E;
 }
 
@@ -448,10 +456,6 @@ a.description {
   .aboutJoe > .body {
     padding-top: 3vmin;
     font-size: 4vmin;
-  }
-
-  .projectPicture {
-    padding-bottom: 50vh;
   }
 
   .projectSummary{

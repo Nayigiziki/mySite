@@ -21,6 +21,9 @@ export default class ProjectPage extends React.Component {
       this.setState(obj);
     }
     render (){
+
+      const mediaTag = this.renderMediaTag();
+
       return (
           <div className='projectPage'>
             <div style={this.state.style.current} className='header'>
@@ -34,7 +37,9 @@ export default class ProjectPage extends React.Component {
                 {this.state.projectName}
               </div>
             </div>
-            <div className='projectPicture'></div>
+            <div className='projectPicture'>
+              {mediaTag}
+            </div>
             
             <div className='projectSpecs'>
               
@@ -45,7 +50,7 @@ export default class ProjectPage extends React.Component {
                 </div>
                 <div className='projectSpec'>
                   <div className='title'>Description</div>
-                  <div className='description'>{this.state.projectDescription}</div>
+                  <div className='description'>{this.state.description}</div>
                 </div>
               </div>
 
@@ -118,5 +123,16 @@ export default class ProjectPage extends React.Component {
       projectObj.next = projects[projectObj.next].projectName;
       projectObj.prev = projects[projectObj.prev].projectName;
       return projectObj;
+    }
+    renderMediaTag(){
+      if(this.state.media.type === 'youtube'){
+        return(<iframe src={this.state.media.resource} frameBorder="0" allowFullScreen></iframe>);
+      }
+
+      if(this.state.media.type === 'gif' || this.state.media.type === 'image' ){
+        return (<img className='projectMedia' src={this.state.media.resource} />);
+      }
+
+      return <div>Joe Logo</div>
     }
 };
