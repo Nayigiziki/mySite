@@ -22,7 +22,7 @@ const projects = [
       media : {type: 'gif', resource: '../assets/shakeilGif.gif'},
       projectDescription: 'A custom content management solution for Shakeil Greeley.',
       projectUrl : 'http://www.shakeil.com', 
-      description : 'Shakeil Greeyley is a designer, artist, activist, and visual problem solver. Shakeil wanted to house his digital body of work in a digital museum; therefore, I built it. Result: shakeil.com, which is built with AngularJs, Ui-Router, Cloudinary API, NodeJs, ExpressJs and Mongodb/Mongoose. Shakeil designed the visual experience, I implemented the user experience.',
+      description : 'Shakeil Greeley is a designer, artist, activist, and visual problem solver. Shakeil wanted to house his digital body of work in a digital museum; therefore, I built it. Result: shakeil.com, which is built with AngularJs, Ui-Router, Cloudinary API, NodeJs, ExpressJs and Mongodb/Mongoose. Shakeil designed the visual experience, I implemented the user experience.',
       githubURL : 'https://github.com/Nayigiziki/ShakCMS',
       collaborators : [{role : 'Graphic Designer', name : 'Shakeil Greeley'}] ,
       year : 2015,

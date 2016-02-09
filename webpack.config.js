@@ -1,7 +1,5 @@
 const merge = require('webpack-merge');
 const webpack = require('webpack');
-
-
 const TARGET = process.env.npm_lifecycle_event;
 const path = require('path');
 
@@ -11,6 +9,7 @@ const PATHS = {
 };
 
 process.env.BABEL_ENV = TARGET;
+
 
 const common = {
   entry : PATHS.app,
@@ -81,5 +80,23 @@ if(TARGET === 'start' || !TARGET) {
 
 
 if(TARGET === 'build') {
+  module.exports = merge(common, {
+    plugins: [
+      new webpack.optimize.UglifyJsPlugin({
+        compress: {
+          warnings: false
+        }
+      }),
+      new webpack.DefinePlugin({
+        'process.env.NODE_ENV': '"production"'
+      })
+    ]
+  });
+}
+
+if(TARGET === 'deploy') {
   module.exports = merge(common, {});
 }
+
+
+

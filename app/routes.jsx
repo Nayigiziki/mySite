@@ -2,8 +2,11 @@ import React from 'react';
 import { Route, Router, browserHistory } from 'react-router';
 import App from './components/App.jsx';
 import ProjectPage from './components/projectPage.jsx';
-import createBrowserHistory from 'history/lib/createBrowserHistory'
-const history = createBrowserHistory()
+import createBrowserHistory from 'history/lib/createBrowserHistory';
+import useScroll from 'scroll-behavior/lib/useStandardScroll';
+
+const history = useScroll(createBrowserHistory)()
+
 export default function(){
   return (
       <Router history={history}>

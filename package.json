@@ -25,15 +25,18 @@
     "webpack-merge": "^0.7.3"
   },
   "dependencies": {
+    "body-parser": "^1.14.2",
     "color-generator": "^0.1.0",
     "file-loader": "^0.8.5",
-    "history": "^1.13.0",
+    "history": "^1.17.0",
     "jquery": "^2.2.0",
     "jump.js": "^0.3.1",
+    "morgan": "^1.6.1",
     "node-uuid": "^1.4.7",
     "object-assign": "^4.0.1",
     "react": "^0.14.7",
     "react-dom": "^0.14.7",
-    "react-router": "^1.0.0"
+    "react-router": "^1.0.0",
+    "scroll-behavior": "^0.3.1"
   }
 }

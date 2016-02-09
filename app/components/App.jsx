@@ -1,7 +1,7 @@
 import React from 'react';
 import uuid from 'node-uuid';
 import assign from 'object-assign';
-import Jump from 'jump.js'
+import Jump from 'jump.js';
 import Projects from './Projects.jsx';
 import Data  from './data.jsx';
 

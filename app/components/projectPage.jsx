@@ -1,7 +1,9 @@
 import React from 'react';
 import {Link} from 'react-router';
- 
+import Jump from 'jump.js';
 import Data  from './data.jsx';
+ 
+const jump = new Jump();
 const projects = Data().projects;
 const colors = ['#092A30', '#003B4C', '#50748A', '#003A70', '#131F6B', '#003056', '#004987', '#002D73', '#0B1F2C', '#051D49', '#092A30', '#003B4C', '#50748A', '#003A70', '#131F6B', '#003056', '#004987', '#002D73', '#0B1F2C', '#051D49'];
 
@@ -19,6 +21,9 @@ export default class ProjectPage extends React.Component {
       let obj = this.getProjectObj(nextProps.params.id);
       this.updateStyle(obj.index, obj);
       this.setState(obj);
+    }
+    componentDidUpdate(){
+
     }
     render (){
 
