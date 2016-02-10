@@ -13,6 +13,7 @@ export default class ProjectPage extends React.Component {
     }
     componentWillMount(){
       let obj = this.getProjectObj(this.props.params.id);
+      console.log('obj', obj);
       let state = this.props.location.state;
       this.updateStyle(state.index, obj);
       this.setState(obj);

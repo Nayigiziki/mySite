@@ -5,13 +5,15 @@
   "main": "index.js",
   "scripts": {
     "build": "webpack",
-    "start": "webpack-dev-server"
+    "start": "webpack-dev-server",
+    "prodBuild": "NODE_ENV=production webpack -p --config webpack.config.production.js"
   },
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "babel-core": "^6.4.5",
-    "babel-loader": "^6.2.1",
+    "babel-cli": "^6.5.1",
+    "babel-core": "^6.5.1",
+    "babel-loader": "^6.2.2",
     "babel-preset-es2015": "^6.3.13",
     "babel-preset-react": "^6.3.13",
     "babel-preset-react-hmre": "^1.1.0",
@@ -25,8 +27,11 @@
     "webpack-merge": "^0.7.3"
   },
   "dependencies": {
+    "babel": "^6.5.1",
+    "babel-register": "^6.5.1",
     "body-parser": "^1.14.2",
     "color-generator": "^0.1.0",
+    "express": "^4.13.4",
     "file-loader": "^0.8.5",
     "history": "^1.17.0",
     "jquery": "^2.2.0",
