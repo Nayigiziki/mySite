@@ -2,7 +2,6 @@ import React from 'react';
 import {Link} from 'react-router';
 import ColorGenerator from 'color-generator';
  
-// see https://github.com/harthur/color for docs on conversions 
 
 export default class Project extends React.Component {
   constructor(props){

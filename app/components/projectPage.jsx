@@ -13,7 +13,6 @@ export default class ProjectPage extends React.Component {
     }
     componentWillMount(){
       let obj = this.getProjectObj(this.props.params.id);
-
       let state = this.props.location.state;
       this.updateStyle(obj);
       this.setState(obj);
@@ -23,13 +22,8 @@ export default class ProjectPage extends React.Component {
       this.updateStyle(obj);
       this.setState(obj);
     }
-    componentDidUpdate(){
-
-    }
     render (){
-
       const mediaTag = this.renderMediaTag();
-
       return (
           <div className='projectPage'>
             <div style={this.state.style.current} className='header'>
@@ -117,18 +111,15 @@ export default class ProjectPage extends React.Component {
       }
     }
     getProjectObj(projectName){
-      console.log(projectName)
       let projectObj;
+
       for(let i = 0; i < projects.length; i++){
         if(projects[i].projectName === projectName){
-            projectObj = projects[i];
-            projectObj = JSON.parse(JSON.stringify(projectObj))
+            projectObj = JSON.parse(JSON.stringify(projects[i]))
             projectObj['index'] = i;
             break;
         }
-      }
-      projectObj.next = projects[projectObj.next].projectName;
-      projectObj.prev = projects[projectObj.prev].projectName;
+      } 
       return projectObj;
     }
     renderMediaTag(){

@@ -306,7 +306,7 @@ a.linkFromIndexToProjectPageActive {
   padding-right: 6%;
 }
 
-#upArrow, #downArrow{
+#upArrow > img, #downArrow > img{
   cursor: pointer;
 }
 

@@ -1,4 +1,5 @@
 import uuid from 'node-uuid';
+let colors = ['#092A30', '#003B4C', '#50748A', '#003A70', '#131F6B', '#003056', '#004987', '#002D73', '#0B1F2C', '#051D49', '#092A30', '#003B4C', '#50748A', '#003A70', '#131F6B', '#003056', '#004987', '#002D73', '#0B1F2C', '#051D49'];
 
 const projects = [
     {
@@ -74,8 +75,9 @@ const projects = [
   ];
 
   for(let i = 0; i < projects.length; i++){
-    projects[i].prev = i === 0 ? projects.length - 1 : i - 1;
-    projects[i].next = i === projects.length - 1 ? 0 : i + 1;
+    projects[i].prev = i === 0 ? projects[projects.length - 1].projectName : projects[i - 1].projectName;
+    projects[i].next = i === projects.length - 1 ? projects[0].projectName : projects[i + 1].projectName;
+    projects[i]['color'] = colors[i % colors.length];
   }
 
 export default function() {

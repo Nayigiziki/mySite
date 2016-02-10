@@ -306,6 +306,10 @@ a.linkFromIndexToProjectPageActive {
   padding-right: 6%;
 }
 
+#upArrow > img, #downArrow > img{
+  cursor: pointer;
+}
+
 .projectPage > .header {
   padding: 2% 6%;
   color: white;
