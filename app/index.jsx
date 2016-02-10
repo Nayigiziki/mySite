@@ -1,4 +1,3 @@
-import './main.css';
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { Route, Router } from 'react-router';

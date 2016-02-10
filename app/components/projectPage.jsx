@@ -13,14 +13,14 @@ export default class ProjectPage extends React.Component {
     }
     componentWillMount(){
       let obj = this.getProjectObj(this.props.params.id);
-      console.log('obj', obj);
+
       let state = this.props.location.state;
-      this.updateStyle(state.index, obj);
+      this.updateStyle(obj);
       this.setState(obj);
     }
     componentWillReceiveProps(nextProps) {
       let obj = this.getProjectObj(nextProps.params.id);
-      this.updateStyle(obj.index, obj);
+      this.updateStyle(obj);
       this.setState(obj);
     }
     componentDidUpdate(){
@@ -99,7 +99,8 @@ export default class ProjectPage extends React.Component {
         </div>
         );
     }
-    updateStyle (index, obj) {
+    updateStyle (obj) {
+      let index = obj.index;
       let prevColor = index === 0 ? colors[colors.length - 1] : colors[index - 1];
       let nextColor =  index === colors.length - 1 ? colors[0] : colors[index + 1];
       let currColor = colors[index];

@@ -1,0 +1,475 @@
+@font-face {
+  font-style:   normal;
+  font-weight:  700;
+  font-family: 'DINOT-MEDIUM';
+  src: url('./font/DINOT-Medium.eot'); /* IE9 Compat Modes */
+  src: url('./font/DINOT-Medium.eot') format('embedded-opentype'), /* IE6-IE8 */
+       url('./font/DINOT-Medium.woff') format('woff'), /* Modern Browsers */
+       url('./font/DINOT-Medium.ttf')  format('truetype'), /* Safari, Android, iOS */
+       url('./font/DINOT-Medium.svg') format('svg'); /* Legacy iOS */
+}
+
+@font-face {
+  font-family: "Univers55";
+  src: url("./font/UniversLTStd.otf");
+  src: url("./font/UniversLTStd.otf") format("opentype");
+  font-style:   normal;
+  font-weight:  700;
+}
+
+@font-face {
+  font-family: "Univers45";
+  src: url("./font/UniversLTStd-Light.ttf");
+  src: url("./font/UniversLTStd-Light.ttf") format("truetype");
+  font-style:   normal;
+  font-weight:  700;
+}
+
+
+@font-face {
+  font-family: "DINOT";
+  src: url("./font/DINOT.otf");
+  src: url("./font/DINOT.otf") format("opentype");
+  font-style:   normal;
+  font-weight:  700;
+}
+
+@font-face {
+  font-family: "DINOT-Bold";
+  src: url("./font/DINOT-Bold.otf");
+  src: url("./font/DINOT-Bold.otf") format("opentype");
+  font-style:   normal;
+  font-weight:  700;
+}
+
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+ol, ul {
+  list-style: none;
+}
+blockquote, q {
+  quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* CSS Start */
+
+body {
+  font-family: DINOT-MEDIUM;
+  margin: 0px;
+  width: 100%;
+  height: 100%;
+}
+
+a {
+  text-decoration: none;
+  color: white;
+}
+
+iframe {
+  height: 65vh;
+}
+
+iframe, .projectMedia {
+  width: 100%;
+  padding: 5vh 0;
+}
+
+#introduction {
+  height: 100vh;
+  padding: 5% 12% 0% 12%;
+}
+
+#name {
+  font-size: 20vmin;
+}
+
+.lastName {
+  position: relative;
+  top: -.2em;
+}
+
+#tagLine {
+  display: flex;
+  display: -webkit-flex;
+  justify-content: flex-end;
+  -webkit-justify-content: flex-end;
+  font-family: Univers55;
+  font-size: 7vh;
+  padding-top: 2.5vh;
+}
+
+#downArrow {
+  display: flex;
+  display: -webkit-flex;
+  justify-content: center;
+  -webkit-justify-content: center;
+  padding-top: 10vh;
+}
+
+.bannerContents {
+  display: flex;
+  display: -webkit-flex;
+  align-items: center;
+  -webkit-align-items: center;
+  justify-content: space-between;
+  -webkit-justify-content: space-between;
+  color: inherit;
+  padding-left: 6%;
+  padding-right: 6%;
+}
+
+.projectBanner {
+  height: auto;
+  padding-top: 3%;
+  padding-bottom: 3%;
+}
+
+.activeProjectBanner {
+  color: white;
+  height: auto;
+  transition : height .25s;
+}
+
+.activeProjectBanner > .projectBanner {
+  background-color: inherit;
+}
+
+a.linkFromIndexToProjectPage {
+  display : none;
+}
+
+a.linkFromIndexToProjectPageActive {
+  display: inline;
+}
+
+.readMoreBox {
+  border-style: solid;
+  border-width: 0px;
+  border-color: transparent;
+  color: transparent;
+  font-size: 2.4vw;
+  padding : 1vh 2vw;
+  max-height: 0;
+  overflow: hidden;
+  -webkit-transition: max-height 0.25s cubic-bezier(0.86, 0, 0.07, 1), border-width 0.25s cubic-bezier(0.86, 0, 0.07, 1), border-color 0.25s cubic-bezier(0.86, 0, 0.07, 1), color 0.25s cubic-bezier(0.86, 0, 0.07, 1);
+  -moz-transition: max-height 0.25s cubic-bezier(0.86, 0, 0.07, 1), border-width 0.25s cubic-bezier(0.86, 0, 0.07, 1), border-color 0.25s cubic-bezier(0.86, 0, 0.07, 1), color 0.25scubic-bezier(0.86, 0, 0.07, 1);
+  transition: max-height 0.25s cubic-bezier(0.86, 0, 0.07, 1), border-width 0.25s cubic-bezier(0.86, 0, 0.07, 1), border-color 0.25s cubic-bezier(0.86, 0, 0.07, 1), color 0.25s cubic-bezier(0.86, 0, 0.07, 1);
+}
+
+.transitionReadMore {
+  max-height: 10vh;
+  border-width: 3px;
+  border-color: white;
+  color: inherit;
+}
+
+.projectTitle {
+  font-family: DINOT;
+  font-size: 7.6vw;
+  max-width: 61%;
+}
+
+.projectSummary {
+  display: flex;
+  display: -webkit-flex;
+  font-family: Univers55;
+  font-size: 2.75vw;
+  max-height: 0;
+  align-items: center;
+  -webkit-align-items: center;
+  justify-content: flex-start;
+  -webkit-justify-content: flex-start;
+  padding-left: 6%;
+  padding-right: 6%;
+  color: transparent;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  -webkit-transition: max-height 0.25s cubic-bezier(0.86, 0, 0.07, 1), color .25s cubic-bezier(0.86, 0, 0.07, 1);
+  -moz-transition: max-height 0.25s cubic-bezier(0.86, 0, 0.07, 1), color .25s cubic-bezier(0.86, 0, 0.07, 1);
+  transition: max-height 0.25s cubic-bezier(0.86, 0, 0.07, 1), color .25s cubic-bezier(0.86, 0, 0.07, 1);
+}
+
+
+.transitionProjectSummary {
+  max-height: 500px;
+  color: white;
+}
+
+.projectSummary > span {
+  padding-bottom: 2%;
+}
+
+.projectBanner .bannerContents :hover {
+  transition-property: height;
+  transition-duration: 1s;
+  height: 60vh;
+}
+
+.plus {
+  transform : rotate(0deg);
+  transition: transform .25s;
+}
+
+.rotatedX {
+  -ms-transform: rotate(45deg); /* IE 9 */
+  -webkit-transform: rotate(45deg); /* Chrome, Safari, Opera */
+  transform: rotate(45deg);
+  -webkit-transition: transform .25s; /* For Safari 3.1 to 6.0 */
+}
+
+.scaledProjectBanner {
+  height: 60vh;
+  -webkit-transition: height .25s; /* For Safari 3.1 to 6.0 */
+  transition: height .25s;
+}
+
+.aboutJoe {
+  padding: 6%;
+}
+
+.aboutJoe > .header {
+  display: flex;
+  display: -webkit-flex;
+  justify-content: space-between;
+  -webkit-justify-content: space-between;
+  align-items: center;
+  -webkit-align-items: center;
+}
+
+.aboutJoe > .header > .name {
+  font-size: 7.6vw;
+  font-family: DINOT;
+}
+
+.aboutJoe > .header > .roles {
+  font-size: 3.7vw;
+  font-family: Univers55;
+}
+
+.aboutJoe > .header > .roles > div {
+  text-align: right;
+}
+
+
+.aboutJoe > .body {
+  padding-top: 3vh;
+  font-family: Univers55;
+  font-size: 2.8vw;
+}
+
+.footer {
+  height: 10vh;
+  display: flex;
+  align-items: center;
+  -webkit-align-items: center;
+  justify-content: space-between;
+  -webkit-justify-content: space-between;
+  background-color: #03A9F4;
+  padding-left: 6%;
+  padding-right: 6%;
+}
+
+.projectPage > .header {
+  padding: 2% 6%;
+  color: white;
+  display: flex;
+  display: -webkit-flex;
+  -webkit-justify-content: space-between;
+  justify-content: space-between;
+  align-items : center;
+  -webkit-align-items : center;
+  background-color: #3B2418;
+}
+
+.projectPage > .header > .name {
+  font-family: DINOT-MEDIUM;
+  font-size: 4vmin;
+}
+
+.projectPage > .header > .projectName {
+  font-family: Univers45;
+  font-size: 5vmin;
+}
+
+.projectPicture {
+  padding-left: 6%;
+  padding-right: 6%;
+  background-color: #9E9E9E;
+}
+
+.projectSpecs {
+  padding: 4vmax 6%;
+  display: flex;
+  flex-direction: column;
+}
+
+.title {
+  color: inherit;
+  font-family: DINOT-Bold;
+  font-size: 5vmin;
+}
+
+.description {
+  font-family: Univers55;
+  font-size: 2.00vmin;
+  word-wrap: break-word;
+}
+
+.projectSpec {
+  padding-bottom: 5vmax;
+  width: 47.22223%;
+}
+
+.row > .projectSpec:nth-child(1){
+  padding-right: 1.38889%;
+}
+
+.row > .projectSpec:nth-child(2){
+  padding-left: 1.38889%;
+}
+
+a.description {
+  color: black;
+}
+
+.projectNavigation {
+  width: 100%;
+  height: 22vh;
+  display: flex;
+  display: -webkit-flex;
+  align-items : center;
+  -webkit-align-items : center;
+}
+
+.prevProject {  
+  display: flex;
+  display: -webkit-flex;
+  align-items : center;
+  -webkit-align-items : center;
+  justify-content: center;
+  -webkit-justify-content: center;
+  color: white;
+  height: 100%;
+  width: 50%;
+  font-size: 3.75vw;
+  font-family: Univers55;
+  background-color: grey;
+}
+
+.nextProject {
+  display: flex;
+  display: -webkit-flex;
+  align-items : center;
+  -webkit-align-items : center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  height: 100%;
+  width: 50%;
+  color: white;
+  font-size: 3.75vw;
+  font-family: Univers55;
+  background-color: #383834;
+}
+
+.row {
+  display: flex;
+  flex-direction: row;
+}
+
+
+@media screen and (max-width: 51.25em){
+  #name{
+    font-size: 17vmin;
+  }
+
+  #tagLine{
+    font-size: 6vw;
+    justify-content: center;
+    -webkit-justify-content: center;
+  }
+
+  #introduction {
+    display: flex;
+    display: -webkit-flex;
+    align-items : center;
+    -webkit-align-items : center;
+  }
+
+  .projectTitle {
+    font-size: auto;
+  }
+
+  .readMoreBox {
+    font-size: 3vmin; 
+  }
+  
+  .bannerContents {
+    font-size: 6vmin;
+     padding: 7% 6%;
+  }
+
+  .aboutJoe > .header > .name {
+    font-size: 10vmin;
+  }
+
+  .aboutJoe > .header > .roles {
+    font-size: 6.66vmin;
+  }
+
+  .aboutJoe > .body {
+    padding-top: 3vmin;
+    font-size: 4vmin;
+  }
+
+  .projectSummary{
+    font-size: 4vw;
+  }
+
+  .title {
+    font-size: 4.5vmin;
+  }
+
+  .description {
+    font-size: 3.00vmin;
+  }
+
+}
+
+

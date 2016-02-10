@@ -40,7 +40,7 @@ export default class Project extends React.Component {
         <div className={divActiveProjectBannerClassString} style={this.state.style}>
             <div className='projectBanner bannerContents'>
               <span className='projectTitle'>{this.props.projectName}</span>
-              <Link className={linkClassString} to={'/projects/' + this.props.projectName} state={this.state.index}>
+              <Link className={linkClassString} to={'projects/' + this.props.projectName} state={this.state.index}>
                 <span className={spanReadMoreClassString}>Read More</span>
               </Link>
               <span className={spanXClassString} onClick={clickSpanXHandler}><img src={'./assets/plus.png'}/></span>

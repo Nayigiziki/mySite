@@ -31,6 +31,7 @@
     "babel-register": "^6.5.1",
     "body-parser": "^1.14.2",
     "color-generator": "^0.1.0",
+    "compression": "^1.6.1",
     "express": "^4.13.4",
     "file-loader": "^0.8.5",
     "history": "^1.17.0",
