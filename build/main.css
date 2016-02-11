@@ -111,6 +111,10 @@ iframe, .projectMedia {
   padding: 5vh 0;
 }
 
+#email {
+  color: black;
+}
+
 #introduction {
   height: 100vh;
   padding: 5% 12% 0% 12%;
