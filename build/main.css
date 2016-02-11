@@ -297,6 +297,7 @@ a.linkFromIndexToProjectPageActive {
 .footer {
   height: 10vh;
   display: flex;
+  display: -webkit-flex;
   align-items: center;
   -webkit-align-items: center;
   justify-content: space-between;
@@ -306,7 +307,7 @@ a.linkFromIndexToProjectPageActive {
   padding-right: 6%;
 }
 
-#upArrow > img, #downArrow > img{
+#upArrow > img, #downArrow > div > img{
   cursor: pointer;
 }
 
@@ -341,7 +342,9 @@ a.linkFromIndexToProjectPageActive {
 .projectSpecs {
   padding: 4vmax 6%;
   display: flex;
+  display: -webkit-flex;
   flex-direction: column;
+  -webkit-flex-direction: column;
 }
 
 .title {
@@ -402,8 +405,8 @@ a.description {
   display: -webkit-flex;
   align-items : center;
   -webkit-align-items : center;
-  -webkit-justify-content: center;
   justify-content: center;
+  -webkit-justify-content: center;
   height: 100%;
   width: 50%;
   color: white;
@@ -425,6 +428,8 @@ a.description {
 
   #tagLine{
     font-size: 6vw;
+    display: flex;
+    display: -webkit-flex;
     justify-content: center;
     -webkit-justify-content: center;
   }
