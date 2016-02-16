@@ -206,7 +206,7 @@ a.linkFromIndexToProjectPageActive {
 
 .projectTitle {
   font-family: DINOT;
-  font-size: 7.6vw;
+  font-size: 5.7vw;
   max-width: 61%;
 }
 
@@ -367,6 +367,10 @@ a.linkFromIndexToProjectPageActive {
   padding-bottom: 5vmax;
   width: 47.22223%;
 }
+.projectSpecDescription {
+  padding-bottom: 5vmax;
+  width: 100%;
+}
 
 .row > .projectSpec:nth-child(1){
   padding-right: 1.38889%;
@@ -421,7 +425,18 @@ a.description {
 
 .row {
   display: flex;
+  display: -webkit-flex;
+  -webkit-flex-direction: row;
   flex-direction: row;
+}
+
+.rowMiddle {
+  display: flex;
+  display: -webkit-flex;
+  -webkit-flex-direction: row;
+  flex-direction: row;
+  justify-content: space-around;
+  -webkit-justify-content: space-around;
 }
 
 

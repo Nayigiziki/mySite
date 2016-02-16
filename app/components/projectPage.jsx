@@ -44,24 +44,24 @@ export default class ProjectPage extends React.Component {
             <div className='projectSpecs'>
               
               <div className='row'>
-                <div className='projectSpec'>
-                  <div className='title'>My Role</div>
-                  <div className='description'>{this.state.myRole}</div>
-                </div>
-                <div className='projectSpec'>
+                <div className='projectSpecDescription'>
                   <div className='title'>Description</div>
                   <div className='description'>{this.state.description}</div>
                 </div>
               </div>
 
-              <div className='row'>
-                  <div className='projectSpec'>
+              <div className='rowMiddle'>
+                  <div>
+                    <div className='title'>My Role</div>
+                    <div className='description'>{this.state.myRole}</div>
+                  </div>
+                  <div>
                     <div className='title'>Collaborators</div>
                     <div className='description'>{this.state.collaborators.map((collaborator,index) =>
                        <div key={index}>{collaborator.role} - {collaborator.name}</div>
                       )}</div>
                   </div>
-                  <div className='projectSpec'>
+                  <div>
                     <div className='title'>Year</div>
                     <div className='description'>{this.state.year}</div>
                   </div>

@@ -41,11 +41,6 @@ export default class Home extends React.Component {
                     <div>Joseph</div>
                     <div className='lastName'>Nayigiziki</div>
                   </div>
-                  <div className='roles'>
-                    <div>Engineer</div>
-                    <div>Tinkerer</div>
-                    <div>Creator</div>
-                  </div>
                 </div>
                 <div className='body'>
                   I am a software engineer who builds applications on the web.  My current interests are Reactive programming, React and WebRTC.
