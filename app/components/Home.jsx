@@ -48,10 +48,10 @@ export default class Home extends React.Component {
                   </div>
                 </div>
                 <div className='body'>
-                  I am a software engineer and JavaScript is my weapon of choice. I have built web applications with technologies including Node, with Angular, React, Node, & Express. Reactive programming’s approach to asynchrony excites me.
+                  I am a software engineer who builds applications on the web.  My current interests are Reactive programming, React and WebRTC.
                   <br></br>
                   <br></br>
-                  <a id='email' href="mailto:josephnayigiziki@gmail.com">Email Me @ josephnayigiziki@gmail.com</a>
+                  <a id='email' href="mailto:josephnayigiziki@gmail.com">Email: Josephnayigiziki@gmail.com</a>
                 </div>
               </div>
               <div className='footer'>
